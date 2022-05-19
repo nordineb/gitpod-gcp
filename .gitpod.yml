@@ -13,7 +13,4 @@ tasks:
 vscode:
   extensions:
     - redhat.vscode-yaml
-    - tim-koehler.helm-intellisense
-    - googlecloudtools.cloudcode
-    - tomphilbin.gruvbox-themes
 

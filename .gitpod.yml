@@ -1,8 +1,8 @@
-image: nordineb/gitpod-gcp:latest
+#image: nordineb/gitpod-gcp:latest
 
 # if debugging needed
-#image:
-#  file: Dockerfile
+image:
+  file: Dockerfile
 
 # List the ports you want to expose and what to do when they are served. See https://www.gitpod.io/docs/config-ports/
 ports:

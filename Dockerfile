@@ -12,8 +12,7 @@ RUN echo 'export PATH="${PATH}:${HOME}/.krew/bin"' >> /home/gitpod/.bashrc
 
 RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo tee /usr/share/keyrings/cloud.google.gpg && sudo apt-get update -y && sudo apt-get install google-cloud-sdk fzf -y
 
-RUN sudo apt-get clean
-RUN rm /tmp/* -rf
+RUN sudo apt-get clean && rm -rf /var/lib/apt/lists/* && rm /tmp/* -rf
 
 # Add aliases
 RUN echo 'alias k="kubectl"' >> /home/gitpod/.bashrc
